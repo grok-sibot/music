@@ -44,7 +44,7 @@ fetch("picks.json",{cache:"no-cache"}).then(r=>r.json()).then(feed=>{
   feed.picks.slice().sort((a,b)=>b.date.localeCompare(a.date)).forEach(p=>{
     const a=el("article");
     a.append(el("div","date",fmt(p.date)));
-    if(p.artwork_path||p.artwork_url){const img=el("img","art");img.src=p.artwork_path||p.artwork_url;img.width=img.height=300;
+    if(p.artwork_path||p.artwork_url){const img=el("img","art");img.src=p.artwork_path||p.artwork_url;
       if(p.artwork_path&&p.artwork_url)img.onerror=()=>{img.onerror=null;img.src=p.artwork_url};
       img.alt=`${p.album||p.track} by ${p.artist}`;img.loading="lazy";a.append(img)}
     a.append(el("h2",null,p.artist));
