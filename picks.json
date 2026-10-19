@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T15:26:49+10:30",
+  "updated": "2026-10-19T20:24:44+10:30",
   "picks": [
     {
       "date": "2026-10-19",
@@ -17,6 +17,7 @@
       "bandcamp_album_id": 3331446416,
       "bandcamp_track_id": 1924480233,
       "artwork_url": "https://f4.bcbits.com/img/a0540927704_10.jpg",
+      "artwork_path": "artwork/2026-10-19-ziur.jpg",
       "apple_music_url": "https://music.apple.com/au/album/alive-unless/1555368594?i=1555368598"
     },
     {
@@ -35,6 +36,7 @@
       "bandcamp_album_id": 2444568642,
       "bandcamp_track_id": 391967535,
       "artwork_url": "https://f4.bcbits.com/img/a1262821415_10.jpg",
+      "artwork_path": "artwork/2026-10-18-polygonia.jpg",
       "apple_music_url": "https://music.apple.com/au/album/crystal-valley/1808745766?i=1808745767"
     },
     {
@@ -53,6 +55,7 @@
       "bandcamp_album_id": 2304826356,
       "bandcamp_track_id": 2955985777,
       "artwork_url": "https://f4.bcbits.com/img/a1310744671_10.jpg",
+      "artwork_path": "artwork/2026-10-17-cahl-sel.jpg",
       "apple_music_url": null
     },
     {
@@ -70,6 +73,7 @@
       "bandcamp_album_id": 404644490,
       "bandcamp_track_id": 3002025336,
       "artwork_url": "https://f4.bcbits.com/img/a1005525194_10.jpg",
+      "artwork_path": "artwork/2026-10-16-ulla.jpg",
       "apple_music_url": "https://music.apple.com/au/album/new-poem/1497133330?i=1497133332"
     },
     {
@@ -88,6 +92,7 @@
       "bandcamp_album_id": 1231675022,
       "bandcamp_track_id": 4132393055,
       "artwork_url": "https://f4.bcbits.com/img/a2184283525_10.jpg",
+      "artwork_path": "artwork/2026-10-15-tauceti.jpg",
       "apple_music_url": "https://music.apple.com/au/album/h%C3%A9lios/1838598779?i=1838598781"
     },
     {
@@ -106,6 +111,7 @@
       "bandcamp_album_id": 4122746777,
       "bandcamp_track_id": 1580898475,
       "artwork_url": "https://f4.bcbits.com/img/a0956424764_10.jpg",
+      "artwork_path": "artwork/2026-10-15-upsammy.jpg",
       "apple_music_url": "https://music.apple.com/au/album/subsoil/1509520818?i=1509520824"
     },
     {
@@ -123,6 +129,7 @@
       "bandcamp_album_id": 2468852282,
       "bandcamp_track_id": 1542711406,
       "artwork_url": "https://f4.bcbits.com/img/a1556737482_10.jpg",
+      "artwork_path": "artwork/2026-10-14-verraco.jpg",
       "apple_music_url": "https://music.apple.com/au/album/0/1742748627?i=1742748635"
     },
     {
@@ -142,6 +149,7 @@
       "bandcamp_album_id": 2679191414,
       "bandcamp_track_id": 132286776,
       "artwork_url": "https://f4.bcbits.com/img/a2645680614_10.jpg",
+      "artwork_path": "artwork/2026-10-13-loraine-james.jpg",
       "apple_music_url": null
     }
   ]

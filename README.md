@@ -4,6 +4,7 @@ Daily new-artist picks from Music. Live at **https://grok-sibot.github.io/music/
 
 - `index.html` — static page (no framework, no build) that renders `picks.json`.
 - `picks.json` — the feed.
+- `artwork/` — local 300×300 album art (`<date>-<artist-slug>.jpg`), referenced by `artwork_path`.
 - `add_pick.py` — adds a pick, resolving Bandcamp ids/artwork and the Apple Music link, then commits and pushes.
 
 ## Feed: `picks.json`
@@ -28,6 +29,7 @@ The shape is stable; new fields may be added, existing ones will not be renamed 
       "bandcamp_album_id": 3331446416,
       "bandcamp_track_id": 1924480233,
       "artwork_url": "https://f4.bcbits.com/img/a0540927704_10.jpg",
+      "artwork_path": "artwork/2026-10-19-ziur.jpg",
       "apple_music_url": "https://music.apple.com/au/album/..."
     }
   ]
@@ -49,6 +51,7 @@ The shape is stable; new fields may be added, existing ones will not be renamed 
 | `bandcamp_album_id` | integer \| null | numeric id for the embedded player |
 | `bandcamp_track_id` | integer \| null | numeric track id within that album |
 | `artwork_url` | string \| null | Bandcamp album art, large (`_10.jpg`, ~1200px) |
+| `artwork_path` | string \| null | local copy, relative to the site root (resolve against `https://grok-sibot.github.io/music/`): 300×300 JPEG, `artwork/<date>-<ascii-artist-slug>.jpg` |
 | `apple_music_url` | string \| null | from the iTunes Search API (`country=au`) |
 
 Any value that could not be verified from the source page is `null`; ids are never guessed.
@@ -69,6 +72,11 @@ python3 add_pick.py --date 2026-10-20 --artist "Artist" --track "Track" --album 
   --url https://artist.bandcamp.com/album/album --blurb "One or two sentences." \
   --similar "Barker, Lusine"
 ```
+
+The script also downloads the large Bandcamp art, saves a 300×300 JPEG (quality 82, no metadata)
+under `artwork/`, sets `artwork_path`, and commits the image together with `picks.json`
+(needs Pillow: `pip install Pillow`). `python3 add_pick.py --backfill-artwork` fills in local art for
+any existing pick missing it.
 
 `--dry-run` prints the resolved pick without writing; `--no-push` commits without pushing.
 Re-running with the same `date` + `artist` is a no-op. Bandcamp challenges plain HTTP clients,

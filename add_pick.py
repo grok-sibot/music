@@ -9,12 +9,18 @@ Usage:
 Bandcamp serves a JS challenge to plain HTTP clients, so pages are fetched with
 plain urllib first and, if challenged, with a real (headed) Chrome via Playwright
 (needs DISPLAY). Any value that cannot be verified is stored as null.
+Artwork is downloaded (large _10 variant), centre-cropped and resized to a 300x300
+JPEG (quality 82, no metadata) at artwork/<date>-<artist-slug>.jpg, recorded as
+artwork_path, and committed together with picks.json.
 Idempotent: a pick with the same date+artist is never added twice.
+  python3 add_pick.py --backfill-artwork   # fetch local art for picks lacking it
 """
-import argparse, datetime, html, json, os, re, subprocess, sys, urllib.parse, urllib.request
+import argparse, datetime, html, io, json, os, re, subprocess, sys, unicodedata, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FEED = os.path.join(HERE, "picks.json")
+ART_DIR = "artwork"
+ART_SIZE = 300
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 ADL = datetime.timezone(datetime.timedelta(hours=10, minutes=30))
 
@@ -106,6 +112,68 @@ def apple_url(artist, track, album):
     return None
 
 
+def slug(s):
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "artist"
+
+
+def artwork_rel(date, artist):
+    return f"{ART_DIR}/{date}-{slug(artist)}.jpg"
+
+
+def large_variant(url):
+    # Bandcamp size variants: _10 ~1200px, _16 700px, _7 160px. Always fetch the large one.
+    return re.sub(r"_\d+\.(jpg|png)$", "_10.jpg", url)
+
+
+def save_artwork(url, rel):
+    """Download url, centre-crop + resize to ART_SIZE square JPEG (q82, no metadata) at rel."""
+    from PIL import Image
+    req = urllib.request.Request(large_variant(url), headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        data = r.read()
+    im = Image.open(io.BytesIO(data))
+    im = im.convert("RGB")
+    w, h = im.size
+    side = min(w, h)
+    im = im.crop(((w - side) // 2, (h - side) // 2, (w - side) // 2 + side, (h - side) // 2 + side))
+    im = im.resize((ART_SIZE, ART_SIZE), Image.LANCZOS)
+    path = os.path.join(HERE, rel)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    clean = Image.new("RGB", im.size)  # fresh image: no EXIF/ICC/comment carried over
+    clean.paste(im)
+    clean.save(path, "JPEG", quality=82, optimize=True, progressive=True)
+    return rel
+
+
+def with_artwork_path(pick, rel):
+    """Return pick with artwork_path placed right after artwork_url (other fields untouched)."""
+    out = {}
+    for k, v in pick.items():
+        if k == "artwork_path":
+            continue
+        out[k] = v
+        if k == "artwork_url":
+            out["artwork_path"] = rel
+    if "artwork_path" not in out:
+        out["artwork_path"] = rel
+    return out
+
+
+def ensure_artwork(pick):
+    """Make sure the pick's local artwork exists; returns (pick, rel_path_or_None)."""
+    if not pick.get("artwork_url"):
+        return with_artwork_path(pick, None), None
+    rel = pick.get("artwork_path") or artwork_rel(pick["date"], pick["artist"])
+    if not os.path.exists(os.path.join(HERE, rel)):
+        try:
+            save_artwork(pick["artwork_url"], rel)
+        except Exception as e:
+            print(f"warn: artwork download failed for {pick['artist']}: {e}", file=sys.stderr)
+            return with_artwork_path(pick, None), None
+    return with_artwork_path(pick, rel), rel
+
+
 def build_pick(a):
     info = bandcamp_info(a.url, a.track)
     if a.track and not info["bandcamp_track_id"]:
@@ -142,30 +210,66 @@ def exists(feed, date, artist):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--date", default=datetime.datetime.now(ADL).date().isoformat(), help="Adelaide date YYYY-MM-DD")
-    ap.add_argument("--artist", required=True)
+    ap.add_argument("--artist")
     ap.add_argument("--track")
     ap.add_argument("--album")
-    ap.add_argument("--url", required=True, help="Bandcamp album URL")
-    ap.add_argument("--blurb", required=True)
+    ap.add_argument("--url", help="Bandcamp album URL")
+    ap.add_argument("--blurb")
     ap.add_argument("--similar", default="", help="comma-separated loved artists")
     ap.add_argument("--year", type=int)
     ap.add_argument("--dry-run", action="store_true", help="print the pick, do not write")
     ap.add_argument("--no-push", action="store_true", help="write+commit but do not push")
+    ap.add_argument("--backfill-artwork", action="store_true",
+                    help="download missing local artwork for existing picks (no new pick)")
     a = ap.parse_args()
-    datetime.date.fromisoformat(a.date)
+    git = lambda *c: subprocess.run(["git", "-C", HERE, *c], check=True)
 
     feed = load()
+    if a.backfill_artwork:
+        if a.dry_run:
+            for p in feed["picks"]:
+                rel = p.get("artwork_path") or artwork_rel(p["date"], p["artist"])
+                if p.get("artwork_url"):
+                    print(("ok   " if os.path.exists(os.path.join(HERE, rel)) else "need ") + rel)
+            return 0
+        changed, files = False, []
+        for i, p in enumerate(feed["picks"]):
+            new, rel = ensure_artwork(p)
+            if new != p:
+                feed["picks"][i] = new
+                changed = True
+            if rel:
+                files.append(rel)
+        if not changed and not files:
+            print("skip: nothing to backfill")
+            return 0
+        if changed:
+            save(feed)
+        git("add", "picks.json", *files)
+        if subprocess.run(["git", "-C", HERE, "diff", "--cached", "--quiet"]).returncode == 0:
+            print("skip: artwork already committed")
+            return 0
+        git("commit", "-m", "Backfill local artwork")
+        if not a.no_push:
+            git("push", "origin", "main")
+        return 0
+
+    if not (a.artist and a.url and a.blurb):
+        ap.error("--artist, --url and --blurb are required")
+    datetime.date.fromisoformat(a.date)
     if exists(feed, a.date, a.artist):
         print(f"skip: {a.artist} already picked on {a.date}")
         return 0
     pick = build_pick(a)
-    print(json.dumps(pick, ensure_ascii=False, indent=2))
     if a.dry_run:
+        print(json.dumps(with_artwork_path(pick, artwork_rel(a.date, a.artist) if pick["artwork_url"] else None),
+                         ensure_ascii=False, indent=2))
         return 0
+    pick, rel = ensure_artwork(pick)
+    print(json.dumps(pick, ensure_ascii=False, indent=2))
     feed["picks"].insert(0, pick)
     save(feed)
-    git = lambda *c: subprocess.run(["git", "-C", HERE, *c], check=True)
-    git("add", "picks.json")
+    git("add", "picks.json", *([rel] if rel else []))
     git("commit", "-m", f"Pick {a.date}: {a.artist} - {a.track or a.album}")
     if not a.no_push:
         git("push", "origin", "main")
