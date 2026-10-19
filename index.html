@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music — daily new-artist picks</title>
+<meta name="description" content="Daily new-artist picks from Music.">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#fbfbfd;--fg:#1d1d1f;--mute:#6e6e73;--line:#d2d2d7;--accent:#0071e3}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--mute:#a1a1a6;--line:#333336;--accent:#2997ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+header{max-width:680px;margin:0 auto;padding:96px 24px 40px}
+h1{font:600 48px/1.08 -apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;letter-spacing:-.02em;margin:0 0 12px}
+header p{color:var(--mute);font-size:21px;margin:0}
+main{max-width:680px;margin:0 auto;padding:0 24px 96px}
+article{padding:56px 0;border-top:1px solid var(--line)}
+.date{color:var(--mute);font-size:14px;letter-spacing:.02em;text-transform:uppercase;margin-bottom:16px}
+.art{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;background:var(--line);box-shadow:0 20px 50px rgba(0,0,0,.15)}
+h2{font:600 32px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;letter-spacing:-.01em;margin:28px 0 4px}
+.track{font-size:21px;margin:0 0 4px}
+.album{color:var(--mute);margin:0 0 16px}
+.blurb{margin:0 0 16px}
+.similar{color:var(--mute);font-size:14px;margin:0 0 24px}
+.row{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+button{font:inherit;font-size:15px;border:0;border-radius:980px;padding:10px 22px;background:var(--accent);color:#fff;cursor:pointer}
+button:hover{filter:brightness(1.1)}
+a{color:var(--accent);text-decoration:none;font-size:15px}a:hover{text-decoration:underline}
+.player{margin-top:20px}
+.player iframe{border:0;width:100%;height:42px}
+footer{color:var(--mute);font-size:13px;text-align:center;padding:0 24px 64px}
+</style>
+</head>
+<body>
+<header><h1>Music</h1><p>One new artist a day.</p></header>
+<main id="picks"><p class="album">Loading…</p></main>
+<footer>Feed: <a href="picks.json">picks.json</a></footer>
+<script>
+const el=(t,c,txt)=>{const e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e};
+const fmt=d=>new Date(d+"T00:00:00").toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+fetch("picks.json",{cache:"no-cache"}).then(r=>r.json()).then(feed=>{
+  const main=document.getElementById("picks");main.textContent="";
+  feed.picks.slice().sort((a,b)=>b.date.localeCompare(a.date)).forEach(p=>{
+    const a=el("article");
+    a.append(el("div","date",fmt(p.date)));
+    if(p.artwork_url){const img=el("img","art");img.src=p.artwork_url;img.alt=`${p.album||p.track} by ${p.artist}`;img.loading="lazy";a.append(img)}
+    a.append(el("h2",null,p.artist));
+    if(p.track)a.append(el("p","track",p.track));
+    if(p.album)a.append(el("p","album",p.album+(p.year?` · ${p.year}`:"")));
+    if(p.blurb)a.append(el("p","blurb",p.blurb));
+    if(p.similar_to&&p.similar_to.length)a.append(el("p","similar","For fans of "+p.similar_to.join(", ")));
+    const row=el("div","row"),player=el("div","player");
+    if(p.bandcamp_album_id){
+      const b=el("button",null,"▶ Play");
+      b.onclick=()=>{let src=`https://bandcamp.com/EmbeddedPlayer/album=${p.bandcamp_album_id}/size=small/bgcol=ffffff/linkcol=0687f5/`+(p.bandcamp_track_id?`track=${p.bandcamp_track_id}/`:"")+"transparent=true/";
+        const f=el("iframe");f.src=src;f.title=`${p.artist} – ${p.track||p.album}`;f.allow="autoplay";player.replaceChildren(f);b.remove()};
+      row.append(b)}
+    if(p.bandcamp_url){const l=el("a",null,"Bandcamp ↗");l.href=p.bandcamp_url;l.target="_blank";l.rel="noopener";row.append(l)}
+    if(p.apple_music_url){const l=el("a",null,"Apple Music ↗");l.href=p.apple_music_url;l.target="_blank";l.rel="noopener";row.append(l)}
+    a.append(row,player);main.append(a)});
+}).catch(()=>{document.getElementById("picks").textContent="Couldn't load picks."});
+</script>
+</body>
+</html>
