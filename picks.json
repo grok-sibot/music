@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-19T20:24:44+10:30",
+  "updated": "2026-10-20T07:12:02+10:30",
   "picks": [
+    {
+      "date": "2026-10-20",
+      "artist": "Toumba",
+      "track": "Petals",
+      "album": "Petals EP",
+      "year": 2023,
+      "blurb": "Amman producer Yazan Zyadat bends Jordanian wedding melodies, Levantine microtonal scales and dabke swing into heavy-bottomed UK club music. His Hessle Audio debut is rhythm-first, playful and very bassy.",
+      "similar_to": [
+        "Blawan",
+        "Daphni",
+        "Anastasia Kristensen"
+      ],
+      "bandcamp_url": "https://toumba.bandcamp.com/album/petals-ep",
+      "bandcamp_album_id": 21941392,
+      "bandcamp_track_id": 3427948903,
+      "artwork_url": "https://f4.bcbits.com/img/a1999107976_10.jpg",
+      "artwork_path": "artwork/2026-10-20-toumba.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/petals/1667377265?i=1667377267"
+    },
     {
       "date": "2026-10-19",
       "artist": "Ziúr",
