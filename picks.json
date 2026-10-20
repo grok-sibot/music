@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-20T07:12:02+10:30",
+  "updated": "2026-10-21T07:08:10+10:30",
   "picks": [
+    {
+      "date": "2026-10-21",
+      "artist": "Marina Herlop",
+      "track": "miu",
+      "album": "Pripyat",
+      "year": 2022,
+      "blurb": "Barcelona composer who chops her own voice and piano into glitchy, Carnatic-inspired rhythms on PAN. Somewhere between choir music and IDM, and lovely on a quiet walk or a coding session.",
+      "similar_to": [
+        "Oneohtrix Point Never",
+        "Gazelle Twin",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://marinaherlop.bandcamp.com/album/pripyat",
+      "bandcamp_album_id": 2869592693,
+      "bandcamp_track_id": 154161706,
+      "artwork_url": "https://f4.bcbits.com/img/a3601398248_10.jpg",
+      "artwork_path": "artwork/2026-10-21-marina-herlop.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/miu/1621291295?i=1621291635"
+    },
     {
       "date": "2026-10-20",
       "artist": "Toumba",
