@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-21T07:08:10+10:30",
+  "updated": "2026-10-22T07:05:55+10:30",
   "picks": [
+    {
+      "date": "2026-10-22",
+      "artist": "Sofie Birch",
+      "track": "Tide Rose",
+      "album": "Holotropica",
+      "year": 2022,
+      "blurb": "Copenhagen composer who builds slow, glowing ambient from synths, field recordings and woodwind, drifting toward new age without going soft. Made for an open-air walk where birdsong blends into the mix.",
+      "similar_to": [
+        "Abul Mogard",
+        "Lisa Lerkenfeldt",
+        "Oneohtrix Point Never"
+      ],
+      "bandcamp_url": "https://sofiebirch.bandcamp.com/album/holotropica",
+      "bandcamp_album_id": 3334495970,
+      "bandcamp_track_id": 4096623965,
+      "artwork_url": "https://f4.bcbits.com/img/a1325560746_10.jpg",
+      "artwork_path": "artwork/2026-10-22-sofie-birch.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/tide-rose/1612864245?i=1612864425"
+    },
     {
       "date": "2026-10-21",
       "artist": "Marina Herlop",
