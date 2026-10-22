@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-22T07:05:55+10:30",
+  "updated": "2026-10-23T07:05:02+10:30",
   "picks": [
+    {
+      "date": "2026-10-23",
+      "artist": "Aho Ssan",
+      "track": "Simulacrum I",
+      "album": "Simulacrum",
+      "year": 2020,
+      "blurb": "Paris producer Désiré Niamké builds Afrofuturist electronics from his own Max/MSP instruments, swinging between crushing distorted bass and luminous drones. His Subtext debut even simulates an imaginary jazz band named for his grandfather.",
+      "similar_to": [
+        "Oneohtrix Point Never",
+        "Andy Stott",
+        "Kode9"
+      ],
+      "bandcamp_url": "https://ahossan.bandcamp.com/album/simulacrum",
+      "bandcamp_album_id": 596075656,
+      "bandcamp_track_id": 1383109533,
+      "artwork_url": "https://f4.bcbits.com/img/a4112677078_10.jpg",
+      "artwork_path": "artwork/2026-10-23-aho-ssan.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/simulacrum-i/1494544223?i=1494544426"
+    },
     {
       "date": "2026-10-22",
       "artist": "Sofie Birch",
