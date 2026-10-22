@@ -9,8 +9,8 @@ Usage:
 Bandcamp serves a JS challenge to plain HTTP clients, so pages are fetched with
 plain urllib first and, if challenged, with a real (headed) Chrome via Playwright
 (needs DISPLAY). Any value that cannot be verified is stored as null.
-Artwork is downloaded (large _10 variant), centre-cropped and resized to a 300x300
-JPEG (quality 82, no metadata) at artwork/<date>-<artist-slug>.jpg, recorded as
+Artwork is downloaded (large _10 variant), centre-cropped and resized to a 1200x1200
+JPEG (quality 87, no metadata) at artwork/<date>-<artist-slug>.jpg, recorded as
 artwork_path, and committed together with picks.json.
 Idempotent: a pick with the same date+artist is never added twice.
   python3 add_pick.py --backfill-artwork   # fetch local art for picks lacking it
@@ -20,7 +20,8 @@ import argparse, datetime, html, io, json, os, re, subprocess, sys, unicodedata,
 HERE = os.path.dirname(os.path.abspath(__file__))
 FEED = os.path.join(HERE, "picks.json")
 ART_DIR = "artwork"
-ART_SIZE = 300
+ART_SIZE = 1200
+ART_QUALITY = 87
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 ADL = datetime.timezone(datetime.timedelta(hours=10, minutes=30))
 
@@ -127,7 +128,7 @@ def large_variant(url):
 
 
 def save_artwork(url, rel):
-    """Download url, centre-crop + resize to ART_SIZE square JPEG (q82, no metadata) at rel."""
+    """Download url, centre-crop + resize to ART_SIZE square JPEG (q87, no metadata; never upscales) at rel."""
     from PIL import Image
     req = urllib.request.Request(large_variant(url), headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r:
@@ -137,12 +138,13 @@ def save_artwork(url, rel):
     w, h = im.size
     side = min(w, h)
     im = im.crop(((w - side) // 2, (h - side) // 2, (w - side) // 2 + side, (h - side) // 2 + side))
-    im = im.resize((ART_SIZE, ART_SIZE), Image.LANCZOS)
+    if side > ART_SIZE:
+        im = im.resize((ART_SIZE, ART_SIZE), Image.LANCZOS)
     path = os.path.join(HERE, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     clean = Image.new("RGB", im.size)  # fresh image: no EXIF/ICC/comment carried over
     clean.paste(im)
-    clean.save(path, "JPEG", quality=82, optimize=True, progressive=True)
+    clean.save(path, "JPEG", quality=ART_QUALITY, optimize=True, progressive=True)
     return rel
 
 
@@ -160,16 +162,31 @@ def with_artwork_path(pick, rel):
     return out
 
 
-def ensure_artwork(pick):
-    """Make sure the pick's local artwork exists; returns (pick, rel_path_or_None)."""
+def art_too_small(path):
+    """True if the file is missing or smaller than ART_SIZE (older 300px caches)."""
+    if not os.path.exists(path):
+        return True
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            return min(im.size) < ART_SIZE
+    except Exception:
+        return True
+
+
+def ensure_artwork(pick, refresh=False):
+    """Make sure the pick's local artwork exists (refresh: also re-fetch if smaller than ART_SIZE)."""
     if not pick.get("artwork_url"):
         return with_artwork_path(pick, None), None
     rel = pick.get("artwork_path") or artwork_rel(pick["date"], pick["artist"])
-    if not os.path.exists(os.path.join(HERE, rel)):
+    path = os.path.join(HERE, rel)
+    if not os.path.exists(path) or (refresh and art_too_small(path)):
         try:
             save_artwork(pick["artwork_url"], rel)
         except Exception as e:
             print(f"warn: artwork download failed for {pick['artist']}: {e}", file=sys.stderr)
+            if os.path.exists(path):  # keep the old (smaller) file rather than dropping it
+                return with_artwork_path(pick, rel), rel
             return with_artwork_path(pick, None), None
     return with_artwork_path(pick, rel), rel
 
@@ -220,7 +237,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="print the pick, do not write")
     ap.add_argument("--no-push", action="store_true", help="write+commit but do not push")
     ap.add_argument("--backfill-artwork", action="store_true",
-                    help="download missing local artwork for existing picks (no new pick)")
+                    help="download missing (or smaller than ART_SIZE) local artwork for existing picks (no new pick)")
     a = ap.parse_args()
     git = lambda *c: subprocess.run(["git", "-C", HERE, *c], check=True)
 
@@ -230,11 +247,11 @@ def main():
             for p in feed["picks"]:
                 rel = p.get("artwork_path") or artwork_rel(p["date"], p["artist"])
                 if p.get("artwork_url"):
-                    print(("ok   " if os.path.exists(os.path.join(HERE, rel)) else "need ") + rel)
+                    print(("need " if art_too_small(os.path.join(HERE, rel)) else "ok   ") + rel)
             return 0
         changed, files = False, []
         for i, p in enumerate(feed["picks"]):
-            new, rel = ensure_artwork(p)
+            new, rel = ensure_artwork(p, refresh=True)
             if new != p:
                 feed["picks"][i] = new
                 changed = True
