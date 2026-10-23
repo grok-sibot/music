@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-23T07:05:02+10:30",
+  "updated": "2026-10-24T07:02:43+10:30",
   "picks": [
+    {
+      "date": "2026-10-24",
+      "artist": "Carmen Villain",
+      "track": "Future Memory",
+      "album": "Only Love From Now On",
+      "year": 2022,
+      "blurb": "Oslo-based Mexican-Norwegian producer Carmen Villain makes slow, tactile ambient from clarinet, flute, field recordings and hazy synths. This Smalltown Supersound record drifts like weather, with guests including trumpeter Arve Henriksen.",
+      "similar_to": [
+        "Robert Lippok",
+        "Anushka Chkheidze",
+        "Oneohtrix Point Never"
+      ],
+      "bandcamp_url": "https://carmenvillain.bandcamp.com/album/only-love-from-now-on",
+      "bandcamp_album_id": 1488021268,
+      "bandcamp_track_id": 4290027035,
+      "artwork_url": "https://f4.bcbits.com/img/a0339038548_10.jpg",
+      "artwork_path": "artwork/2026-10-24-carmen-villain.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/future-memory/1597279790?i=1597279802"
+    },
     {
       "date": "2026-10-23",
       "artist": "Aho Ssan",
