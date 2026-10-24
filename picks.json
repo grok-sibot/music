@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-24T07:02:43+10:30",
+  "updated": "2026-10-25T07:01:16+10:30",
   "picks": [
+    {
+      "date": "2026-10-25",
+      "artist": "DJ Plead",
+      "track": "Return to Deuce",
+      "album": "Please",
+      "year": 2026,
+      "blurb": "Adelaide-raised, Berlin-based producer Jared Beeler blends Arabic-inflected percussion with dub and wide-open ambient on his 2026 Smalltown Supersound album.",
+      "similar_to": [
+        "Blawan",
+        "Daphni",
+        "Robert Lippok"
+      ],
+      "bandcamp_url": "https://djplead.bandcamp.com/album/please",
+      "bandcamp_album_id": 2223587497,
+      "bandcamp_track_id": 839772986,
+      "artwork_url": "https://f4.bcbits.com/img/a4202918657_10.jpg",
+      "artwork_path": "artwork/2026-10-25-dj-plead.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/return-to-deuce/1895379422?i=6763569479"
+    },
     {
       "date": "2026-10-24",
       "artist": "Carmen Villain",
