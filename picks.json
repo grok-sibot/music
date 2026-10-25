@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-25T07:01:16+10:30",
+  "updated": "2026-10-26T07:09:40+10:30",
   "picks": [
+    {
+      "date": "2026-10-26",
+      "artist": "Nazar",
+      "track": "Diverted",
+      "album": "Guerrilla",
+      "year": 2020,
+      "blurb": "Angolan-born producer who darkens kuduro into what he calls rough kuduro: clattering, bass-heavy club rhythms full of tension, built around his family's memories of Angola's civil war (Hyperdub).",
+      "similar_to": [
+        "Blawan",
+        "Anastasia Kristensen",
+        "Daphni"
+      ],
+      "bandcamp_url": "https://nazar.bandcamp.com/album/guerrilla",
+      "bandcamp_album_id": 4061718437,
+      "bandcamp_track_id": 2735562916,
+      "artwork_url": "https://f4.bcbits.com/img/a2577958090_10.jpg",
+      "artwork_path": "artwork/2026-10-26-nazar.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/diverted/1490175346?i=1490175348"
+    },
     {
       "date": "2026-10-25",
       "artist": "DJ Plead",
