@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-27T07:02:34+10:30",
+  "updated": "2026-10-28T07:05:37+10:30",
   "picks": [
+    {
+      "date": "2026-10-28",
+      "artist": "Rian Treanor",
+      "track": "Hypnic Jerks",
+      "album": "File Under UK Metaplasm",
+      "year": 2020,
+      "blurb": "Rotherham producer who came back from Uganda's Nyege Nyege studio and mashed singeli's 200bpm rush into mangled, high-definition UK club music. Jerky, acidic and wired, with serious bass weight.",
+      "similar_to": [
+        "Blawan",
+        "Kode9",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://riantreanor.bandcamp.com/album/file-under-uk-metaplasm",
+      "bandcamp_album_id": 692543641,
+      "bandcamp_track_id": 820899656,
+      "artwork_url": "https://f4.bcbits.com/img/a3120507674_10.jpg",
+      "artwork_path": "artwork/2026-10-28-rian-treanor.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/hypnic-jerks/1522973759?i=1522973760"
+    },
     {
       "date": "2026-10-27",
       "artist": "Yu Su",
