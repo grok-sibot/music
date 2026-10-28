@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-28T07:05:37+10:30",
+  "updated": "2026-10-29T07:10:23+10:30",
   "picks": [
+    {
+      "date": "2026-10-29",
+      "artist": "Coby Sey",
+      "track": "Onus",
+      "album": "Conduit",
+      "year": 2022,
+      "blurb": "South London producer and vocalist (an NTS regular and Tirzah/Mica Levi collaborator) whose AD 93 debut smears murky dub bass, broken drums, saxophone and half-spoken vocals into something heavy and haunted. Dark, crunchy bass music that feels like a fog rolling down a Lewisham street at night.",
+      "similar_to": [
+        "Kode9",
+        "Andy Stott",
+        "Oneohtrix Point Never"
+      ],
+      "bandcamp_url": "https://cobysey.bandcamp.com/album/conduit",
+      "bandcamp_album_id": 213096362,
+      "bandcamp_track_id": 916802628,
+      "artwork_url": "https://f4.bcbits.com/img/a0974931449_10.jpg",
+      "artwork_path": "artwork/2026-10-29-coby-sey.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/onus/1707802890?i=1707803843"
+    },
     {
       "date": "2026-10-28",
       "artist": "Rian Treanor",
