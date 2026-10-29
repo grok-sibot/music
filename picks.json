@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-29T07:10:23+10:30",
+  "updated": "2026-10-30T07:01:28+10:30",
   "picks": [
+    {
+      "date": "2026-10-30",
+      "artist": "rRoxymore",
+      "track": "Forward Flamingo",
+      "album": "Face to Phase",
+      "year": 2019,
+      "blurb": "Berlin-based producer Hermione Frank twists broken techno, rubbery percussion and jazzy synth chords into playful, off-kilter club tracks. Bright where recent picks were murky, but with the same restless drum programming.",
+      "similar_to": [
+        "Daphni",
+        "Robert Lippok",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://rroxymore.bandcamp.com/album/face-to-phase",
+      "bandcamp_album_id": 203484150,
+      "bandcamp_track_id": 183852621,
+      "artwork_url": "https://f4.bcbits.com/img/a1670551314_10.jpg",
+      "artwork_path": "artwork/2026-10-30-rroxymore.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/forward-flamingo/1476466541?i=1476466544"
+    },
     {
       "date": "2026-10-29",
       "artist": "Coby Sey",
