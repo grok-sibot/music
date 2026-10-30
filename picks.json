@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-30T07:01:28+10:30",
+  "updated": "2026-10-31T07:08:21+10:30",
   "picks": [
+    {
+      "date": "2026-10-31",
+      "artist": "ben bondy",
+      "track": "Bend",
+      "album": "XO Salt Llif3",
+      "year": 2025,
+      "blurb": "Berlin-based producer whose 2025 album XO Salt Llif3 melts ambient haze, dissolved club rhythms and murmured, half-sung vocals into something tender and foggy. Lovely for a slow walk.",
+      "similar_to": [
+        "Oneohtrix Point Never",
+        "Lusine",
+        "Lisa Lerkenfeldt"
+      ],
+      "bandcamp_url": "https://benbondy.bandcamp.com/album/xo-salt-llif3",
+      "bandcamp_album_id": 1757772434,
+      "bandcamp_track_id": 2327094226,
+      "artwork_url": "https://f4.bcbits.com/img/a2308893094_10.jpg",
+      "artwork_path": "artwork/2026-10-31-ben-bondy.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/bend/1760678641?i=1760678726"
+    },
     {
       "date": "2026-10-30",
       "artist": "rRoxymore",
