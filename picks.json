@@ -1,6 +1,25 @@
 {
-  "updated": "2026-10-31T07:08:21+10:30",
+  "updated": "2026-11-01T07:07:22+10:30",
   "picks": [
+    {
+      "date": "2026-11-01",
+      "artist": "Bruce",
+      "track": "What",
+      "album": "Sonder Somatic",
+      "year": 2018,
+      "blurb": "Bristol producer Larry McCarthy makes shape-shifting UK club music on Hessle Audio, from icy, skeletal sound design to warehouse-shaking rave. What is the album's heaviest, most ominous club cut.",
+      "similar_to": [
+        "Blawan",
+        "Kode9",
+        "Barker"
+      ],
+      "bandcamp_url": "https://wordsofbruce.bandcamp.com/album/sonder-somatic",
+      "bandcamp_album_id": 884346099,
+      "bandcamp_track_id": 3997697194,
+      "artwork_url": "https://f4.bcbits.com/img/a3477916412_10.jpg",
+      "artwork_path": "artwork/2026-11-01-bruce.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/what/1435634325?i=1435634339"
+    },
     {
       "date": "2026-10-31",
       "artist": "ben bondy",
