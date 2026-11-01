@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-01T07:07:22+10:30",
+  "updated": "2026-11-02T07:03:38+10:30",
   "picks": [
+    {
+      "date": "2026-11-02",
+      "artist": "Ehua",
+      "track": "Ehua - Xantho",
+      "album": "Aquamarine EP",
+      "year": 2021,
+      "blurb": "Italian-Ivorian producer Ehua makes water-themed club music on Nervous Horizon, moving from sludgy broken beats to deep-sea drone techno with custom percussion and reversed Italian vocals.",
+      "similar_to": [
+        "Kode9",
+        "Blawan",
+        "Andy Stott"
+      ],
+      "bandcamp_url": "https://ehua.bandcamp.com/album/aquamarine-ep",
+      "bandcamp_album_id": 1942444645,
+      "bandcamp_track_id": 1592905319,
+      "artwork_url": "https://f4.bcbits.com/img/a0788049492_10.jpg",
+      "artwork_path": "artwork/2026-11-02-ehua.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-01",
       "artist": "Bruce",
