@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-02T07:03:38+10:30",
+  "updated": "2026-11-03T07:04:30+10:30",
   "picks": [
+    {
+      "date": "2026-11-03",
+      "artist": "Mabe Fratti",
+      "track": "Kravitz",
+      "album": "Sentir que no sabes",
+      "year": 2024,
+      "blurb": "Guatemalan cellist in Mexico City who folds bowed cello, wobbly brass and her own close-up vocals into lopsided, glitchy art-pop. Sentir que no sabes (Tin Angel, 2024) is her warmest and strangest record yet.",
+      "similar_to": [
+        "Oneohtrix Point Never",
+        "Gazelle Twin",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://tinangelrecords.bandcamp.com/album/sentir-que-no-sabes",
+      "bandcamp_album_id": 3070670157,
+      "bandcamp_track_id": 843218029,
+      "artwork_url": "https://f4.bcbits.com/img/a0399079093_10.jpg",
+      "artwork_path": "artwork/2026-11-03-mabe-fratti.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/kravitz/1740787009?i=1740787019"
+    },
     {
       "date": "2026-11-02",
       "artist": "Ehua",
