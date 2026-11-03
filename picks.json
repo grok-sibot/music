@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-03T07:04:30+10:30",
+  "updated": "2026-11-04T07:09:57+10:30",
   "picks": [
+    {
+      "date": "2026-11-04",
+      "artist": "Sully",
+      "track": "Poison",
+      "album": "Swandive",
+      "year": 2020,
+      "blurb": "UK producer Jack Stevens is a cult figure in modern jungle, pairing icy melodies with chopped amen breaks. His 2020 Astrophonica EP Swandive swings from venomous, brutal bass to soaring strings.",
+      "similar_to": [
+        "Kode9",
+        "Blawan",
+        "Andy Stott"
+      ],
+      "bandcamp_url": "https://sullyuk.bandcamp.com/album/swandive",
+      "bandcamp_album_id": 3257994375,
+      "bandcamp_track_id": 329288264,
+      "artwork_url": "https://f4.bcbits.com/img/a3932944861_10.jpg",
+      "artwork_path": "artwork/2026-11-04-sully.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/poison/1529086489?i=1529086493"
+    },
     {
       "date": "2026-11-03",
       "artist": "Mabe Fratti",
