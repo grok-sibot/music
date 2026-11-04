@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-04T07:09:57+10:30",
+  "updated": "2026-11-05T07:10:17+10:30",
   "picks": [
+    {
+      "date": "2026-11-05",
+      "artist": "Ossia",
+      "track": "Dub Hell",
+      "album": "Devil's Dance",
+      "year": 2019,
+      "blurb": "Bristol producer from the Young Echo crew who drags dub, dancehall pressure and industrial grime through spring reverbs and tape delay. His Blackest Ever Black debut Devil's Dance is heavy, smoky and full of dread.",
+      "similar_to": [
+        "Andy Stott",
+        "Kode9",
+        "Blawan"
+      ],
+      "bandcamp_url": "https://ossia.bandcamp.com/album/devils-dance",
+      "bandcamp_album_id": 2036219511,
+      "bandcamp_track_id": 717283520,
+      "artwork_url": "https://f4.bcbits.com/img/a0273902636_10.jpg",
+      "artwork_path": "artwork/2026-11-05-ossia.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-04",
       "artist": "Sully",
