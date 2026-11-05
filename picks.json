@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-05T07:10:17+10:30",
+  "updated": "2026-11-06T07:00:58+10:30",
   "picks": [
+    {
+      "date": "2026-11-06",
+      "artist": "Hiro Kone",
+      "track": "Scotch Yoke pt. I & II",
+      "album": "Pure Expenditure",
+      "year": 2018,
+      "blurb": "New York producer Nicky Mao builds hypnotic, gear-driven experimental techno from repeating sequences, chopped vocals and dark synth layers. Her DAIS Records album Pure Expenditure was mixed by Telefon Tel Aviv's Josh Eustis and sits somewhere between ritual and dancefloor.",
+      "similar_to": [
+        "Helena Hauff",
+        "Andy Stott",
+        "Gazelle Twin"
+      ],
+      "bandcamp_url": "https://hirokone.bandcamp.com/album/pure-expenditure",
+      "bandcamp_album_id": 2157813613,
+      "bandcamp_track_id": 409142070,
+      "artwork_url": "https://f4.bcbits.com/img/a0230539084_10.jpg",
+      "artwork_path": "artwork/2026-11-06-hiro-kone.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/pure-expenditure/1474107384"
+    },
     {
       "date": "2026-11-05",
       "artist": "Ossia",
