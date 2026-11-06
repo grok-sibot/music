@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-06T07:00:58+10:30",
+  "updated": "2026-11-07T07:07:36+10:30",
   "picks": [
+    {
+      "date": "2026-11-07",
+      "artist": "Matryoshka",
+      "track": "Parted By The Sea",
+      "album": "Blasé Saint",
+      "year": 2026,
+      "blurb": "Seattle producer Jacqueline Lawson aka Matryoshka turns club leftovers into haunted dub techno on her sferic debut — FM pads, submerged bass and Chain Reaction-style rhythms that splinter into fog. Blasé Saint sits between late-night dread and hazy bass weight.",
+      "similar_to": [
+        "Andy Stott",
+        "Kode9",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://sferic.bandcamp.com/album/blas-saint",
+      "bandcamp_album_id": 3278822528,
+      "bandcamp_track_id": 194080536,
+      "artwork_url": "https://f4.bcbits.com/img/a2950487861_10.jpg",
+      "artwork_path": "artwork/2026-11-07-matryoshka.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-06",
       "artist": "Hiro Kone",
