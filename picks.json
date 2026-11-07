@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-07T07:07:36+10:30",
+  "updated": "2026-11-08T07:12:31+10:30",
   "picks": [
+    {
+      "date": "2026-11-08",
+      "artist": "Katatonic Silentio",
+      "track": "In Battere",
+      "album": "Mantis 17",
+      "year": 2025,
+      "blurb": "Turin producer Mariachiara Troianiello carves icy, hypnotic leftfield techno from dubwise pressure, glitchy interference and late-90s tech-step mood. Mantis 17 (2025) is austere, tense and deep — club music built for headphones as much as the floor.",
+      "similar_to": [
+        "Helena Hauff",
+        "Andy Stott",
+        "Blawan"
+      ],
+      "bandcamp_url": "https://katatonicsilentio.bandcamp.com/album/mantis-17",
+      "bandcamp_album_id": 3771600846,
+      "bandcamp_track_id": 1243220081,
+      "artwork_url": "https://f4.bcbits.com/img/a3340449823_10.jpg",
+      "artwork_path": "artwork/2026-11-08-katatonic-silentio.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/in-battere/1846753957?i=1846754019"
+    },
     {
       "date": "2026-11-07",
       "artist": "Matryoshka",
