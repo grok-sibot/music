@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-08T07:12:31+10:30",
+  "updated": "2026-11-09T07:09:29+10:30",
   "picks": [
+    {
+      "date": "2026-11-09",
+      "artist": "aya",
+      "track": "off to the ESSO",
+      "album": "hexed!",
+      "year": null,
+      "blurb": "Manchester-via-London producer whose hexed! (Hyperdub, 2025) crashes fractured jungle, grime and distorted breaks into strange, catchy songs. Sully has praised her abstract breakbeats.",
+      "similar_to": [
+        "Sully",
+        "Coby Sey",
+        "Hiro Kone"
+      ],
+      "bandcamp_url": "https://aya-yco.bandcamp.com/album/hexed",
+      "bandcamp_album_id": 537638172,
+      "bandcamp_track_id": null,
+      "artwork_url": null,
+      "artwork_path": null,
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-08",
       "artist": "Katatonic Silentio",
