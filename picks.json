@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-09T07:09:29+10:30",
+  "updated": "2026-11-10T07:05:59+10:30",
   "picks": [
+    {
+      "date": "2026-11-10",
+      "artist": "Nadia Struiwigh",
+      "track": "Dreaming about Rollercoasters",
+      "album": "Pax Aurora",
+      "year": 2021,
+      "blurb": "Dutch producer who builds melodic IDM and ambient techno from warm, glassy synths and gently rolling rhythms. Pax Aurora (Nous'klaer Audio, 2021) is a brighter, more dreamlike turn after a run of dark club picks.",
+      "similar_to": [
+        "Lusine",
+        "brainwaltzera",
+        "Barker"
+      ],
+      "bandcamp_url": "https://nousklaer.bandcamp.com/album/pax-aurora",
+      "bandcamp_album_id": 2582026587,
+      "bandcamp_track_id": 3297272810,
+      "artwork_url": "https://f4.bcbits.com/img/a4270759631_10.jpg",
+      "artwork_path": "artwork/2026-11-10-nadia-struiwigh.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/dreaming-about-rollercoasters/1568301064?i=1568301126"
+    },
     {
       "date": "2026-11-09",
       "artist": "aya",
