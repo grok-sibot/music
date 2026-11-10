@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-10T07:05:59+10:30",
+  "updated": "2026-11-11T07:10:38+10:30",
   "picks": [
+    {
+      "date": "2026-11-11",
+      "artist": "Laksa",
+      "track": "FWD Ghosts",
+      "album": "Sen On One",
+      "year": 2020,
+      "blurb": "London producer on Bristol's Timedance label, fusing South London dub pressure with nimble, rolling broken drums. Physical, bass-heavy beat science between techno, UK garage and dubstep.",
+      "similar_to": [
+        "Blawan",
+        "Kode9",
+        "Barker"
+      ],
+      "bandcamp_url": "https://laksa.bandcamp.com/album/sen-on-one",
+      "bandcamp_album_id": 3043140620,
+      "bandcamp_track_id": 2970315917,
+      "artwork_url": "https://f4.bcbits.com/img/a0103150953_10.jpg",
+      "artwork_path": "artwork/2026-11-11-laksa.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/fwd-ghosts/1660798947?i=1660799058"
+    },
     {
       "date": "2026-11-10",
       "artist": "Nadia Struiwigh",
