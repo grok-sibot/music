@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-11T07:10:38+10:30",
+  "updated": "2026-11-12T07:03:04+10:30",
   "picks": [
+    {
+      "date": "2026-11-12",
+      "artist": "Flora Yin Wong",
+      "track": "Tirta Empul",
+      "album": "Holy Palm",
+      "year": 2020,
+      "blurb": "London producer weaving field recordings from temples and forests into dark, ritualistic ambient and broken percussion. Holy Palm (PAN, 2020) is eerie, spacious and heavy in the low end.",
+      "similar_to": [
+        "Andy Stott",
+        "Gazelle Twin",
+        "Oneohtrix Point Never"
+      ],
+      "bandcamp_url": "https://florayinwong.bandcamp.com/album/holy-palm-2",
+      "bandcamp_album_id": 2067124154,
+      "bandcamp_track_id": 3557231214,
+      "artwork_url": "https://f4.bcbits.com/img/a3954578469_10.jpg",
+      "artwork_path": "artwork/2026-11-12-flora-yin-wong.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/tirta-empul/1537390912?i=1537390913"
+    },
     {
       "date": "2026-11-11",
       "artist": "Laksa",
