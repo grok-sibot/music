@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-12T07:03:04+10:30",
+  "updated": "2026-11-13T07:03:52+10:30",
   "picks": [
+    {
+      "date": "2026-11-13",
+      "artist": "Kush Jones",
+      "track": "Night Ride",
+      "album": "Nice Day",
+      "year": 2020,
+      "blurb": "Bronx producer folding footwork's skittering 160 bpm drums into deep, melodic Detroit-style techno. Nice Day is playful and emotional, with modular synth lines riding restless, swinging rhythms.",
+      "similar_to": [
+        "Kode9",
+        "Blawan",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://kushjones.bandcamp.com/album/nice-day",
+      "bandcamp_album_id": null,
+      "bandcamp_track_id": null,
+      "artwork_url": null,
+      "artwork_path": null,
+      "apple_music_url": "https://music.apple.com/au/album/night-ride/1558933449?i=1558933714"
+    },
     {
       "date": "2026-11-12",
       "artist": "Flora Yin Wong",
