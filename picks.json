@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-13T07:03:52+10:30",
+  "updated": "2026-11-14T07:07:32+10:30",
   "picks": [
+    {
+      "date": "2026-11-14",
+      "artist": "MJ Guider",
+      "track": "Perfect Interference",
+      "album": "Sour Cherry Bell",
+      "year": 2020,
+      "blurb": "New Orleans producer Melissa Guion's debut buries drowsy vocals under hazy synth drones and slow, pulsing drum machines: dub-tinged dream-pop with Kranky's fog over it. Joshua Eustis (Telefon Tel Aviv) mastered it.",
+      "similar_to": [
+        "Andy Stott",
+        "Lusine",
+        "Gazelle Twin"
+      ],
+      "bandcamp_url": "https://mjguider.bandcamp.com/album/sour-cherry-bell",
+      "bandcamp_album_id": 359691684,
+      "bandcamp_track_id": 3205487144,
+      "artwork_url": "https://f4.bcbits.com/img/a0751049823_10.jpg",
+      "artwork_path": "artwork/2026-11-14-mj-guider.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/perfect-interference/1522728355?i=1522728729"
+    },
     {
       "date": "2026-11-13",
       "artist": "Kush Jones",
