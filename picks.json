@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-14T07:07:32+10:30",
+  "updated": "2026-11-15T07:06:55+10:30",
   "picks": [
+    {
+      "date": "2026-11-15",
+      "artist": "Lyra Pramuk",
+      "track": "Tendril",
+      "album": "Fountain",
+      "year": 2020,
+      "blurb": "Berlin-based American vocalist who built her debut entirely from her own voice, layered and sculpted by electronics into wordless, devotional futurist folk. Fountain (Bedroom Community, 2020) sits between choir, club and ritual.",
+      "similar_to": [
+        "Gazelle Twin",
+        "Oneohtrix Point Never",
+        "Lisa Lerkenfeldt"
+      ],
+      "bandcamp_url": "https://lyrapramuk.bandcamp.com/album/fountain",
+      "bandcamp_album_id": 3742626777,
+      "bandcamp_track_id": 3696818149,
+      "artwork_url": "https://f4.bcbits.com/img/a2386861821_10.jpg",
+      "artwork_path": "artwork/2026-11-15-lyra-pramuk.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-14",
       "artist": "MJ Guider",
