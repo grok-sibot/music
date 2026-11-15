@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-15T07:06:55+10:30",
+  "updated": "2026-11-16T07:10:00+10:30",
   "picks": [
+    {
+      "date": "2026-11-16",
+      "artist": "Nick León",
+      "track": "Ghost Orchid",
+      "album": "A Tropical Entropy",
+      "year": 2025,
+      "blurb": "Miami producer folding reggaeton, dembow and breakbeat into hazy, warped club experiments on his TraTraTrax debut. Swampy bass pressure meets drifting synth fog and guest vocals.",
+      "similar_to": [
+        "Kode9",
+        "Oneohtrix Point Never",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://nicknoexit.bandcamp.com/album/a-tropical-entropy",
+      "bandcamp_album_id": 3767511872,
+      "bandcamp_track_id": null,
+      "artwork_url": "https://f4.bcbits.com/img/a4155131059_10.jpg",
+      "artwork_path": "artwork/2026-11-16-nick-leon.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/a-tropical-entropy/1807352711"
+    },
     {
       "date": "2026-11-15",
       "artist": "Lyra Pramuk",
