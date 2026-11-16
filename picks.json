@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-16T07:10:00+10:30",
+  "updated": "2026-11-17T07:06:53+10:30",
   "picks": [
+    {
+      "date": "2026-11-17",
+      "artist": "Facta",
+      "track": "Brushes",
+      "album": "Blush",
+      "year": 2021,
+      "blurb": "London producer and Wisdom Teeth co-founder whose debut LP folds UK bass and broken beats into lush FM synths, aqueous pads and clicks-n-cuts melody. Brushes is tense, coiled machine jazz with nods to Photek and Eli Keszler.",
+      "similar_to": [
+        "Lusine",
+        "Kode9",
+        "brainwaltzera"
+      ],
+      "bandcamp_url": "https://facta.bandcamp.com/album/blush",
+      "bandcamp_album_id": 2652287286,
+      "bandcamp_track_id": 1115660953,
+      "artwork_url": "https://f4.bcbits.com/img/a1132617684_10.jpg",
+      "artwork_path": "artwork/2026-11-17-facta.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/brushes/1551141700?i=1551141703"
+    },
     {
       "date": "2026-11-16",
       "artist": "Nick León",
