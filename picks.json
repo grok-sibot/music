@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-17T07:06:53+10:30",
+  "updated": "2026-11-18T07:03:32+10:30",
   "picks": [
+    {
+      "date": "2026-11-18",
+      "artist": "Perila",
+      "track": "Blue Leather",
+      "album": "Attunement",
+      "year": 2026,
+      "blurb": "Berlin-based Russian artist Alexandra Zakharenko layers breath, voice, field recordings and detuned piano into intimate, drifting ambient. Attunement (Oct 2026) is a 60-minute mixtape-archive of sketches built for listening outdoors.",
+      "similar_to": [
+        "Abul Mogard",
+        "Lisa Lerkenfeldt",
+        "Andy Stott"
+      ],
+      "bandcamp_url": "https://perilazone.bandcamp.com/album/attunement",
+      "bandcamp_album_id": 673837092,
+      "bandcamp_track_id": null,
+      "artwork_url": "https://f4.bcbits.com/img/a2765125956_10.jpg",
+      "artwork_path": "artwork/2026-11-18-perila.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-17",
       "artist": "Facta",
