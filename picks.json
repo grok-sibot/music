@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-18T07:03:32+10:30",
+  "updated": "2026-11-19T07:03:47+10:30",
   "picks": [
+    {
+      "date": "2026-11-19",
+      "artist": "Simo Cell",
+      "track": "rapids",
+      "album": "Cuspide Des Sirènes",
+      "year": 2023,
+      "blurb": "Paris producer and TEMƎTIQUE co-founder whose self-released debut LP drifts between trap, juke, bass music and ambient, all wet, bubbling textures and shape-shifting tempos. A club record that plays like one long underwater quest.",
+      "similar_to": [
+        "Kode9",
+        "Blawan",
+        "Lusine"
+      ],
+      "bandcamp_url": "https://simocell.bandcamp.com/album/cuspide-des-sir-nes",
+      "bandcamp_album_id": 1179411620,
+      "bandcamp_track_id": 2598538405,
+      "artwork_url": "https://f4.bcbits.com/img/a0332119830_10.jpg",
+      "artwork_path": "artwork/2026-11-19-simo-cell.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/rapids/1695761059?i=1695761608"
+    },
     {
       "date": "2026-11-18",
       "artist": "Perila",
