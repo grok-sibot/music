@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-20T07:07:34+10:30",
+  "updated": "2026-11-21T07:09:31+10:30",
   "picks": [
+    {
+      "date": "2026-11-21",
+      "artist": "Oli XL",
+      "track": "Liquid Love",
+      "album": "Rogue Intruder, Soul Enhancer",
+      "year": 2019,
+      "blurb": "Stockholm producer who stitched 386 uncleared samples from games, films and pop into glitchy, emotional IDM-meets-club collage. Clicky, playful and oddly tender, like Wisdom Teeth via a broken Game Boy.",
+      "similar_to": [
+        "Lusine",
+        "Kode9",
+        "Oneohtrix Point Never"
+      ],
+      "bandcamp_url": "https://olixl.bandcamp.com/album/rogue-intruder-soul-enhancer",
+      "bandcamp_album_id": 1841178645,
+      "bandcamp_track_id": 281590548,
+      "artwork_url": "https://f4.bcbits.com/img/a1280714004_10.jpg",
+      "artwork_path": "artwork/2026-11-21-oli-xl.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/liquid-love/1619489956?i=1619489958"
+    },
     {
       "date": "2026-11-20",
       "artist": "Sa Pa",
