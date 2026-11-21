@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-21T07:09:31+10:30",
+  "updated": "2026-11-22T07:10:44+10:30",
   "picks": [
+    {
+      "date": "2026-11-22",
+      "artist": "Tristan Arp",
+      "track": "Invertebrate",
+      "album": "Oddkin",
+      "year": 2021,
+      "blurb": "Detroit-born, London-based producer (Asa Tone, Human Pitch co-founder) making biomorphic techno: pointillist micro-percussion, asymmetrical rhythms and animated sound design that drifts between ambient and polyrhythmic. Oddkin (2021) imagines each track as a different living creature.",
+      "similar_to": [
+        "Barker",
+        "Lusine",
+        "Kode9"
+      ],
+      "bandcamp_url": "https://tristanarp.bandcamp.com/album/oddkin",
+      "bandcamp_album_id": 2328835141,
+      "bandcamp_track_id": 2517681526,
+      "artwork_url": "https://f4.bcbits.com/img/a2772138157_10.jpg",
+      "artwork_path": "artwork/2026-11-22-tristan-arp.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/invertebrate/1554328065?i=1554328454"
+    },
     {
       "date": "2026-11-21",
       "artist": "Oli XL",
