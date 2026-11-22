@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-22T07:10:44+10:30",
+  "updated": "2026-11-23T07:02:20+10:30",
   "picks": [
+    {
+      "date": "2026-11-23",
+      "artist": "Ylia",
+      "track": "Flowers in June",
+      "album": "Ame Agaru",
+      "year": 2023,
+      "blurb": "Málaga-based Susana Hernández, a classically trained pianist who came up DJing breakbeat raves, makes grief-tinged ambient on Ame Agaru (Balmat, 2023), folding flutes, clarinet and fingerpicked guitar into glowing drones, with one dub techno-tinged track.",
+      "similar_to": [
+        "Abul Mogard",
+        "Lisa Lerkenfeldt",
+        "Andy Stott"
+      ],
+      "bandcamp_url": "https://ylia.bandcamp.com/album/ame-agaru",
+      "bandcamp_album_id": 1268566494,
+      "bandcamp_track_id": 305545913,
+      "artwork_url": "https://f4.bcbits.com/img/a2128465581_10.jpg",
+      "artwork_path": "artwork/2026-11-23-ylia.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/flowers-in-june/1684492341?i=1684492347"
+    },
     {
       "date": "2026-11-22",
       "artist": "Tristan Arp",
