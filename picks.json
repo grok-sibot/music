@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-23T07:02:20+10:30",
+  "updated": "2026-11-24T07:09:13+10:30",
   "picks": [
+    {
+      "date": "2026-11-24",
+      "artist": "Iceboy Violet",
+      "track": "Mouth Breather",
+      "album": "How To Glitch Under The Map",
+      "year": 2026,
+      "blurb": "Manchester rapper-producer who smears grime and drill cadences over glitchy, half-dissolved ambient beats; this self-released album dropped on 4 November 2026.",
+      "similar_to": [
+        "Kode9",
+        "Gazelle Twin",
+        "Andy Stott"
+      ],
+      "bandcamp_url": "https://iceboyviolet.bandcamp.com/album/how-to-glitch-under-the-map",
+      "bandcamp_album_id": 3578039072,
+      "bandcamp_track_id": 2693353070,
+      "artwork_url": "https://f4.bcbits.com/img/a3339554018_10.jpg",
+      "artwork_path": "artwork/2026-11-24-iceboy-violet.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/mouth-breather/6825174605?i=6825174614"
+    },
     {
       "date": "2026-11-23",
       "artist": "Ylia",
