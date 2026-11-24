@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-24T07:09:13+10:30",
+  "updated": "2026-11-25T07:09:12+10:30",
   "picks": [
+    {
+      "date": "2026-11-25",
+      "artist": "Batu",
+      "track": "Convergence",
+      "album": "Opal",
+      "year": null,
+      "blurb": "Bristol producer Omar McCutcheon, boss of the Timedance label, makes mutating leftfield techno and UK bass with crystalline, bendy sound design. His debut album Opal pulls the club rhythms apart into something stranger and more emotional.",
+      "similar_to": [
+        "Blawan",
+        "Kode9",
+        "Barker"
+      ],
+      "bandcamp_url": "https://batutimedance.bandcamp.com/album/opal",
+      "bandcamp_album_id": 1655969835,
+      "bandcamp_track_id": null,
+      "artwork_url": null,
+      "artwork_path": null,
+      "apple_music_url": "https://music.apple.com/au/album/convergence/1660799015?i=1660799328"
+    },
     {
       "date": "2026-11-24",
       "artist": "Iceboy Violet",
