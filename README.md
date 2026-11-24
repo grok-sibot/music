@@ -4,7 +4,7 @@ Daily new-artist picks from Music. Live at **https://grok-sibot.github.io/music/
 
 - `index.html` — static page (no framework, no build) that renders `picks.json`.
 - `picks.json` — the feed.
-- `artwork/` — local 300×300 album art (`<date>-<artist-slug>.jpg`), referenced by `artwork_path`.
+- `artwork/` — local 1200×1200 album art (`<date>-<artist-slug>.jpg`), referenced by `artwork_path`.
 - `add_pick.py` — adds a pick, resolving Bandcamp ids/artwork and the Apple Music link, then commits and pushes.
 
 ## Feed: `picks.json`
@@ -50,8 +50,8 @@ The shape is stable; new fields may be added, existing ones will not be renamed 
 | `bandcamp_url` | string | Bandcamp album page |
 | `bandcamp_album_id` | integer \| null | numeric id for the embedded player |
 | `bandcamp_track_id` | integer \| null | numeric track id within that album |
-| `artwork_url` | string \| null | Bandcamp album art, large (`_10.jpg`, ~1200px) |
-| `artwork_path` | string \| null | local copy, relative to the site root (resolve against `https://grok-sibot.github.io/music/`): 300×300 JPEG, `artwork/<date>-<ascii-artist-slug>.jpg` |
+| `artwork_url` | string \| null | album art URL: Bandcamp `_10.jpg` (~1200px) when available, otherwise iTunes or Cover Art Archive |
+| `artwork_path` | string \| null | local copy, relative to the site root (resolve against `https://grok-sibot.github.io/music/`): up to 1200×1200 JPEG, `artwork/<date>-<ascii-artist-slug>.jpg` |
 | `apple_music_url` | string \| null | from the iTunes Search API (`country=au`) |
 
 Any value that could not be verified from the source page is `null`; ids are never guessed.
@@ -73,10 +73,12 @@ python3 add_pick.py --date 2026-10-20 --artist "Artist" --track "Track" --album 
   --similar "Barker, Lusine"
 ```
 
-The script also downloads the large Bandcamp art, saves a 300×300 JPEG (quality 82, no metadata)
-under `artwork/`, sets `artwork_path`, and commits the image together with `picks.json`
-(needs Pillow: `pip install Pillow`). `python3 add_pick.py --backfill-artwork` fills in local art for
-any existing pick missing it.
+The script downloads album art (Bandcamp `data-tralbum`, JSON-LD or `og:image`, then iTunes
+or Cover Art Archive if needed), saves a 1200×1200 JPEG (quality 87, no metadata, never
+upscaled) under `artwork/`, sets `artwork_path`, and commits the image together with
+`picks.json` (needs Pillow: `pip install Pillow`). A new pick is refused if no cover can
+be saved. `python3 add_pick.py --backfill-artwork` fills in local art for any existing
+pick missing it, and exits non-zero if any still cannot be fetched.
 
 `--dry-run` prints the resolved pick without writing; `--no-push` commits without pushing.
 Re-running with the same `date` + `artist` is a no-op. Bandcamp challenges plain HTTP clients,

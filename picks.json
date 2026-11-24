@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-25T07:09:12+10:30",
+  "updated": "2026-11-25T09:52:11+10:30",
   "picks": [
     {
       "date": "2026-11-25",
       "artist": "Batu",
       "track": "Convergence",
       "album": "Opal",
-      "year": null,
+      "year": 2022,
       "blurb": "Bristol producer Omar McCutcheon, boss of the Timedance label, makes mutating leftfield techno and UK bass with crystalline, bendy sound design. His debut album Opal pulls the club rhythms apart into something stranger and more emotional.",
       "similar_to": [
         "Blawan",
@@ -15,9 +15,9 @@
       ],
       "bandcamp_url": "https://batutimedance.bandcamp.com/album/opal",
       "bandcamp_album_id": 1655969835,
-      "bandcamp_track_id": null,
-      "artwork_url": null,
-      "artwork_path": null,
+      "bandcamp_track_id": 3656574429,
+      "artwork_url": "https://f4.bcbits.com/img/a1207864425_10.jpg",
+      "artwork_path": "artwork/2026-11-25-batu.jpg",
       "apple_music_url": "https://music.apple.com/au/album/convergence/1660799015?i=1660799328"
     },
     {
@@ -242,10 +242,10 @@
         "Lusine"
       ],
       "bandcamp_url": "https://kushjones.bandcamp.com/album/nice-day",
-      "bandcamp_album_id": null,
-      "bandcamp_track_id": null,
-      "artwork_url": null,
-      "artwork_path": null,
+      "bandcamp_album_id": 2509880538,
+      "bandcamp_track_id": 137762936,
+      "artwork_url": "https://f4.bcbits.com/img/a0938243978_10.jpg",
+      "artwork_path": "artwork/2026-11-13-kush-jones.jpg",
       "apple_music_url": "https://music.apple.com/au/album/night-ride/1558933449?i=1558933714"
     },
     {
@@ -310,7 +310,7 @@
       "artist": "aya",
       "track": "off to the ESSO",
       "album": "hexed!",
-      "year": null,
+      "year": 2025,
       "blurb": "Manchester-via-London producer whose hexed! (Hyperdub, 2025) crashes fractured jungle, grime and distorted breaks into strange, catchy songs. Sully has praised her abstract breakbeats.",
       "similar_to": [
         "Sully",
@@ -319,9 +319,9 @@
       ],
       "bandcamp_url": "https://aya-yco.bandcamp.com/album/hexed",
       "bandcamp_album_id": 537638172,
-      "bandcamp_track_id": null,
-      "artwork_url": null,
-      "artwork_path": null,
+      "bandcamp_track_id": 3838725554,
+      "artwork_url": "https://f4.bcbits.com/img/a2857872500_10.jpg",
+      "artwork_path": "artwork/2026-11-09-aya.jpg",
       "apple_music_url": null
     },
     {
