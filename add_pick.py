@@ -42,12 +42,22 @@ def _plain_text(url, ua=UA, timeout=30):
 
 
 def _page_has_album_data(s):
-    if not s or ("Client Challenge" in s and "bc-page-properties" not in s
-                 and "application/ld+json" not in s):
+    """True when the HTML has structured album data (ids, tracks, art), not just a meta tag.
+
+    og:image / bc-page-properties can appear mid-navigation, before JSON-LD or data-tralbum.
+    Returning early on those alone is how a pick can be saved without bandcamp_album_id / track_id.
+    """
+    if not s or "Client Challenge" in s:
         return False
-    return ("data-tralbum" in s or "bc-page-properties" in s
-            or "application/ld+json" in s or 'property="og:image"' in s
-            or "property='og:image'" in s)
+    return "data-tralbum" in s or "application/ld+json" in s
+
+
+def _safe_content(pg):
+    try:
+        return pg.content()
+    except Exception:
+        # Playwright raises if the challenge page is still navigating to the album.
+        return ""
 
 
 def _browser(url):
@@ -59,20 +69,26 @@ def _browser(url):
             pg = b.new_context(user_agent=UA).new_page()
             pg.goto(url, wait_until="domcontentloaded", timeout=60000)
             for _ in range(30):
-                if "Client Challenge" not in pg.title():
+                title = pg.title() or ""
+                if "Client Challenge" not in title and not title.startswith("Loading "):
                     break
                 pg.wait_for_timeout(1000)
             else:
                 raise RuntimeError(f"Bandcamp client challenge did not clear for {url}")
-            for _ in range(15):
-                s = pg.content()
-                if _page_has_album_data(s):
-                    return s
+            try:
+                # script tags are hidden; wait for attached, not visible
+                pg.wait_for_selector(
+                    'script[type="application/ld+json"], [data-tralbum]',
+                    state="attached", timeout=15000)
+            except Exception:
+                pass
+            last = ""
+            for _ in range(20):
+                last = _safe_content(pg)
+                if _page_has_album_data(last):
+                    return last
                 pg.wait_for_timeout(500)
-            s = pg.content()
-            if not _page_has_album_data(s):
-                raise RuntimeError(f"Bandcamp page had no album data for {url}")
-            return s
+            raise RuntimeError(f"Bandcamp page had no album data for {url}")
         finally:
             b.close()
 
@@ -649,6 +665,9 @@ def main():
         print(f"skip: {a.artist} already picked on {a.date}")
         return 0
     pick = build_pick(a)
+    def has_album_id(p):
+        return bool(re.fullmatch(r"\d+", str(p.get("bandcamp_album_id") or "")))
+
     if a.dry_run:
         # resolve the URL we would save, but do not write
         preview = dict(pick)
@@ -661,7 +680,15 @@ def main():
         if not preview.get("artwork_url"):
             print("error: no artwork source found", file=sys.stderr)
             return 1
+        if not has_album_id(preview):
+            print("error: no Bandcamp album id (the website widget hides a pick without one)", file=sys.stderr)
+            return 1
         return 0
+    if not has_album_id(pick):
+        print(json.dumps(pick, ensure_ascii=False, indent=2))
+        print(f"error: refusing to add {a.artist} without a Bandcamp album id "
+              "(the website widget hides a pick without one)", file=sys.stderr)
+        return 1
     pick, rel = ensure_artwork(pick)
     print(json.dumps(pick, ensure_ascii=False, indent=2))
     if not rel:

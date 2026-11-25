@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-26T07:10:51+10:30",
+  "updated": "2026-11-26T08:28:05+10:30",
   "picks": [
     {
       "date": "2026-11-26",
       "artist": "Pugilist",
       "track": "Source",
       "album": "Source (with Tamen)",
-      "year": null,
+      "year": 2025,
       "blurb": "Melbourne producer making icy, dubbed-out atmospheric jungle. Source, with Tamen on his own Ruff Kutz label, is a misty ode to Source Direct with deep 808s and a 2-step detour on Fuchsia.",
       "similar_to": [
         "Sully",
@@ -14,8 +14,8 @@
         "Andy Stott"
       ],
       "bandcamp_url": "https://pugilist.bandcamp.com/album/source",
-      "bandcamp_album_id": null,
-      "bandcamp_track_id": null,
+      "bandcamp_album_id": 1296077507,
+      "bandcamp_track_id": 3160706052,
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7b/d6/3b/7bd63b73-43c1-1750-9a76-02a197be095d/5063817003447_cover.jpg/1200x1200bb.jpg",
       "artwork_path": "artwork/2026-11-26-pugilist.jpg",
       "apple_music_url": "https://music.apple.com/au/album/source/1829685693?i=1829685694"
