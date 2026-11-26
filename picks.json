@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-26T08:28:05+10:30",
+  "updated": "2026-11-27T07:06:17+10:30",
   "picks": [
+    {
+      "date": "2026-11-27",
+      "artist": "exael",
+      "track": "Eidolon",
+      "album": "Ice That Melts The Tips",
+      "year": 2022,
+      "blurb": "Berlin producer blending skittery IDM and glitch with murky ambient dub, warm dub-techno pads and mutant EBM bass. Ice That Melts The Tips collects her remastered Bandcamp-Friday tunes, issued on wax by 3XL.",
+      "similar_to": [
+        "Andy Stott",
+        "Lusine",
+        "Barker"
+      ],
+      "bandcamp_url": "https://naemi.bandcamp.com/album/ice-that-melts-the-tips",
+      "bandcamp_album_id": 969639511,
+      "bandcamp_track_id": 1712752883,
+      "artwork_url": "https://f4.bcbits.com/img/a3195905138_10.jpg",
+      "artwork_path": "artwork/2026-11-27-exael.jpg",
+      "apple_music_url": null
+    },
     {
       "date": "2026-11-26",
       "artist": "Pugilist",
