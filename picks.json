@@ -1,6 +1,24 @@
 {
-  "updated": "2026-11-27T07:06:17+10:30",
+  "updated": "2026-11-28T07:08:16+10:30",
   "picks": [
+    {
+      "date": "2026-11-28",
+      "artist": "Elkotsh",
+      "track": "Mwlid Elgorn",
+      "album": "rhlt jdi",
+      "year": 2025,
+      "blurb": "Cairo-area producer pushing mahraganat to its experimental edge: processed hand drums chopped into footwork-style polyrhythms, slow dembow thud, acidic synths and electrified maqam melodies. His debut rhlt jdi (2025) is co-released by Cairo's HIZZ and Heat Crimes.",
+      "similar_to": [
+        "Kode9",
+        "Daphni"
+      ],
+      "bandcamp_url": "https://heatcrimes.bandcamp.com/album/rhlt-jdi",
+      "bandcamp_album_id": 2980877321,
+      "bandcamp_track_id": 815975478,
+      "artwork_url": "https://f4.bcbits.com/img/a0419010954_10.jpg",
+      "artwork_path": "artwork/2026-11-28-elkotsh.jpg",
+      "apple_music_url": "https://music.apple.com/au/album/mwlid-elgorn/1819941911?i=1819941913"
+    },
     {
       "date": "2026-11-27",
       "artist": "exael",
